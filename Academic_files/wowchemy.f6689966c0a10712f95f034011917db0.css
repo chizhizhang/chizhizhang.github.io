@@ -13222,6 +13222,10 @@ ul.network-icon {
     text-decoration: line-through; /* 中间画删除线 */
 }
 
+.withdrawn, .course {
+    display: inline-block;
+}
+
 #profile .network-icon {
     margin-top: .5rem
 }
