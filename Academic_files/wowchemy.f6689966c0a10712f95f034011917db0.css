@@ -13216,6 +13216,12 @@ ul.network-icon {
     margin: 0
 }
 
+
+.withdrawn {
+    color: grey; /* 文字颜色变灰色 */
+    text-decoration: line-through; /* 中间画删除线 */
+}
+
 #profile .network-icon {
     margin-top: .5rem
 }
