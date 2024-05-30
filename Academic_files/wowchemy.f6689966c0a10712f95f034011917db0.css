@@ -13164,6 +13164,33 @@ html[dir=rtl] body {
     text-decoration: none
 }
 
+.card.withdrawn {
+    margin-bottom: 1rem
+}
+
+.card.withdrawn:last-of-type {
+    margin-bottom: 0
+}
+
+.withdrawn .card-subtitle a {
+    border-bottom: solid 1px transparent
+}
+
+.withdrawn .card-subtitle a:hover {
+    border-bottom: solid 1px;
+    text-decoration: none
+}
+
+
+.withdrawn {
+    color: grey; 
+    text-decoration: line-through; 
+}
+
+.withdrawn, .course {
+    display: inline-block;
+}
+
 #profile {
     text-align: center;
     padding: 30px 10px;
@@ -13214,16 +13241,6 @@ ul.network-icon {
     list-style: none;
     padding: 0;
     margin: 0
-}
-
-
-.withdrawn {
-    color: grey; /* 文字颜色变灰色 */
-    text-decoration: line-through; /* 中间画删除线 */
-}
-
-.withdrawn, .course {
-    display: inline-block;
 }
 
 #profile .network-icon {
