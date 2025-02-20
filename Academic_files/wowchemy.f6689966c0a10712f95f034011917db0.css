@@ -13198,8 +13198,8 @@ html[dir=rtl] body {
 }
 
 .avatar {
-    width: 270px;
-    height: 270px;
+    width: 350px;
+    height: 350px;
     margin: 0 auto;
     object-fit: cover
 }
