@@ -154,6 +154,21 @@
       line-height: 1.45;
       display: inline-block
     }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      align-items: stretch
+    }
+
+    #contact-map {
+      width: 100%;
+      min-height: 320px;
+      border-radius: 14px;
+      border: 1px solid rgba(21, 101, 192, .14);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, .06)
+    }
   </style>
 </head>
 
@@ -198,8 +213,10 @@
                   data-target="#publications"><span>Publications</span></a></li>
               <li class="nav-item"><a class="nav-link" href="https://chizhizhang.github.io/#teaching"
                   data-target="#teaching"><span>Teaching</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="https://chizhizhang.github.io/#awards"
+                  data-target="#awards"><span>Awards</span></a></li>
               <li class="nav-item"><a class="nav-link" href="https://chizhizhang.github.io/#contact"
-                  data-target="#contact"><span>Awards</span></a></li>
+                  data-target="#contact"><span>Contact</span></a></li>
             </ul>
           </div>
           <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
@@ -816,7 +833,7 @@
         </div>
       </div>
     </section>
-    <section id="contact" class="home-section wg-contact">
+    <section id="awards" class="home-section wg-contact">
       <div class="home-section-bg"></div>
       <div class="container">
         <div class="row">
@@ -835,6 +852,36 @@
                   <p><strong>Conference distinctions:</strong> Best Paper Award at DOCS 2025; Best Paper Award at SRSE 2025; student supervision leading to Best Student Paper Award and Best Session Presentation at SRSE 2025.</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="home-section wg-contact">
+      <div class="home-section-bg"></div>
+      <div class="container">
+        <div class="row">
+          <div
+            class="section-heading col-12 mb-4 d-flex flex-column align-items-start">
+            <h1 class="mb-0">Contact</h1>
+          </div>
+          <div class="col-12">
+            <div class="contact-grid">
+              <div class="editorial-stack">
+                <div class="editorial-row">
+                  <div class="editorial-label">Email</div>
+                  <div class="editorial-copy">
+                    <p><a href="mailto:zhangchizhi@ciomp.ac.cn">zhangchizhi@ciomp.ac.cn</a></p>
+                  </div>
+                </div>
+                <div class="editorial-row">
+                  <div class="editorial-label">Institution</div>
+                  <div class="editorial-copy">
+                    <p>Changchun Institute of Optics, Fine Mechanics and Physics, Chinese Academy of Sciences, Changchun, China.</p>
+                  </div>
+                </div>
+              </div>
+              <div id="contact-map" role="img" aria-label="Campus location map"></div>
             </div>
           </div>
         </div>
@@ -879,6 +926,7 @@
       const themeSystemQuery = window.matchMedia("(prefers-color-scheme: dark)");
       const THEME_PREF_VERSION_KEY = "wcThemePrefVersion";
       const THEME_PREF_VERSION_VALUE = "2026-04-auto-default";
+      const mapContainer = document.querySelector("#contact-map");
 
       const getSystemThemeName = function () {
         return themeSystemQuery.matches ? "Dark" : "Light";
@@ -955,6 +1003,19 @@
         } else if (typeof themeSystemQuery.addListener === "function") {
           themeSystemQuery.addListener(onSystemThemeChange);
         }
+      }
+
+      if (mapContainer && window.L) {
+        const map = L.map("contact-map", { scrollWheelZoom: false }).setView([43.8171, 125.3235], 12);
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 19,
+          attribution: "&copy; OpenStreetMap contributors"
+        }).addTo(map);
+
+        L.marker([43.8171, 125.3235]).addTo(map)
+          .bindPopup("CIOMP / UCAS, Changchun")
+          .openPopup();
       }
 
       if (!publicationsLink || !publicationsSection) return;
