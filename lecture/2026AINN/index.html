@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Spring 2026 course page for Artificial Intelligence and Neural Networks, including course overview and PDF lecture downloads.">
+  <title>Artificial Intelligence and Neural Networks | Spring 2026</title>
+  <link rel="icon" type="image/png" href="../../logo/CCZlogo_32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f8fc;
+      --panel: rgba(255, 255, 255, 0.96);
+      --ink: #14324f;
+      --muted: #54708a;
+      --line: rgba(72, 124, 184, 0.14);
+      --line-strong: rgba(72, 124, 184, 0.22);
+      --blue: #1f6fbe;
+      --blue-deep: #155a9c;
+      --sky: #eaf3ff;
+      --mint: #edf8f4;
+      --shadow: 0 18px 42px rgba(68, 109, 158, 0.08);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Source Sans 3", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(214, 233, 255, 0.5), rgba(214, 233, 255, 0) 26%),
+        linear-gradient(180deg, #f1f6fb 0%, #f7fbff 42%, #f4f8fc 100%);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page-shell {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 52px;
+    }
+
+    .hero,
+    .panel,
+    .materials-board {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 28px;
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(239, 246, 255, 0.94) 60%, rgba(244, 250, 247, 0.94));
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 26px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.96rem;
+      font-weight: 600;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--sky);
+      border: 1px solid var(--line);
+      color: var(--blue);
+      font-family: "Montserrat", "Source Sans 3", sans-serif;
+      font-weight: 700;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      color: var(--blue-deep);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .back-link:hover,
+    .back-link:focus {
+      transform: translateY(-1px);
+      border-color: var(--line-strong);
+      background: var(--sky);
+      text-decoration: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.8fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--sky);
+      color: var(--blue-deep);
+      font-family: "Montserrat", "Source Sans 3", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-copy h1 {
+      margin: 16px 0 12px;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: clamp(2.25rem, 4.6vw, 3.7rem);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-copy p {
+      margin: 0;
+      max-width: 60ch;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .hero-meta {
+      display: grid;
+      gap: 12px;
+    }
+
+    .meta-item {
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .meta-label {
+      color: var(--muted);
+      font-family: "Montserrat", "Source Sans 3", sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .meta-value {
+      margin-top: 6px;
+      color: var(--ink);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .panel,
+    .materials-board {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(242, 248, 255, 0.95) 56%, rgba(245, 251, 248, 0.94));
+      box-shadow: var(--shadow);
+    }
+
+    .section-label {
+      margin-bottom: 10px;
+      color: var(--blue-deep);
+      font-family: "Montserrat", "Source Sans 3", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .panel h2,
+    .materials-header h2,
+    .materials-board h3,
+    .materials-module h3 {
+      margin: 0 0 12px;
+      font-family: "Source Serif 4", Georgia, serif;
+      line-height: 1.18;
+    }
+
+    .panel h2 {
+      font-size: 1.72rem;
+    }
+
+    .panel p,
+    .materials-header p,
+    .materials-board p,
+    .materials-module p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.78;
+    }
+
+    .panel ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.82;
+    }
+
+    .materials {
+      margin-top: 26px;
+    }
+
+    .materials-header {
+      margin-bottom: 14px;
+    }
+
+    .materials-header h2 {
+      font-size: 2rem;
+    }
+
+    .materials-board h3 {
+      font-size: 1.5rem;
+    }
+
+    .materials-board > p {
+      margin-bottom: 18px;
+    }
+
+    .materials-module-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .materials-module {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(72, 124, 184, 0.1);
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .materials-module h3 {
+      font-size: 1.34rem;
+      margin-bottom: 8px;
+    }
+
+    .materials-module p {
+      margin-bottom: 14px;
+    }
+
+    .material-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .material-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(72, 124, 184, 0.1);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .material-name {
+      margin: 0;
+      color: var(--ink);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 132px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(30, 107, 184, 0.16);
+      background: linear-gradient(180deg, #2376c9, #165ea4);
+      color: #ffffff;
+      text-decoration: none;
+      font-family: "Montserrat", "Source Sans 3", sans-serif;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+      box-shadow: 0 12px 24px rgba(30, 107, 184, 0.16);
+    }
+
+    .download-btn:hover,
+    .download-btn:focus {
+      transform: translateY(-1px);
+      filter: brightness(1.03);
+      text-decoration: none;
+    }
+
+    .footer-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.72;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .section-grid,
+      .materials-module-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page-shell {
+        width: min(100% - 20px, 1080px);
+        padding-top: 16px;
+      }
+
+      .hero,
+      .panel,
+      .materials-board {
+        padding: 20px;
+      }
+
+      .hero-top {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .material-item {
+        grid-template-columns: 1fr;
+      }
+
+      .download-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-top">
+        <div class="brand">
+          <span class="brand-mark">AI</span>
+          <span>Prof. Chizhi Chris Zhang | Course Materials</span>
+        </div>
+        <a class="back-link" href="../../index.html#teaching">Back to Teaching</a>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Spring 2026</div>
+          <h1>Artificial Intelligence and Neural Networks</h1>
+          <p>This page provides the course overview and direct access to lecture-note PDFs. Students can use the
+            materials below for lecture preparation, review, and revision throughout the semester.</p>
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-item">
+            <div class="meta-label">Course Focus</div>
+            <div class="meta-value">One integrated course covering AI foundations together with neural-network methods.</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Course Structure</div>
+            <div class="meta-value">Two connected parts: Artificial Intelligence and Neural Networks.</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">For Students</div>
+            <div class="meta-value">Download the relevant lecture PDF and follow the sequence of the course materials below.</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-grid">
+      <article class="panel">
+        <div class="section-label">Course Overview</div>
+        <h2>One course linking intelligent systems and learning methods.</h2>
+        <p>The course introduces major concepts in artificial intelligence together with foundational neural-network
+          methods used in modern prediction and decision systems.</p>
+      </article>
+
+      <article class="panel">
+        <div class="section-label">Course Structure</div>
+        <h2>Two parts within the same course.</h2>
+        <ul>
+          <li><strong>Part I. Artificial Intelligence:</strong> intelligent agents, search, representation, and reasoning.</li>
+          <li><strong>Part II. Neural Networks:</strong> neural models, training ideas, and data-driven prediction methods.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="materials">
+      <div class="materials-header">
+        <div class="section-label">Lecture Materials</div>
+        <h2>Download Lecture Notes</h2>
+        <p>The lecture notes below belong to the same AINN course and are organised by teaching part.</p>
+      </div>
+
+      <div class="materials-board">
+        <div class="materials-module-grid">
+          <div class="materials-module">
+            <div class="section-label">Part I</div>
+            <h3>Artificial Intelligence</h3>
+            <p>Lecture notes for the first part of the AINN course.</p>
+            <div class="material-list">
+              <div class="material-item">
+                <div class="material-name">AI Lecture 01</div>
+                <a class="download-btn" href="./AI1.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">AI Lecture 02</div>
+                <a class="download-btn" href="./AI2.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">AI Lecture 03</div>
+                <a class="download-btn" href="./AI3.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">AI Lecture 04</div>
+                <a class="download-btn" href="./AI4.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">AI Lecture 05</div>
+                <a class="download-btn" href="./AI5.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">AI Lecture 06</div>
+                <a class="download-btn" href="./AI6.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">AI Lecture 07</div>
+                <a class="download-btn" href="./AI7.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">AI Lecture 08</div>
+                <a class="download-btn" href="./AI8.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">AI Lecture 09</div>
+                <a class="download-btn" href="./AI9.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">AI Lecture 10</div>
+                <a class="download-btn" href="./AI10.pdf" download>Download PDF</a>
+              </div>
+            </div>
+          </div>
+          <div class="materials-module">
+            <div class="section-label">Part II</div>
+            <h3>Neural Networks</h3>
+            <p>Lecture notes for the second part of the AINN course.</p>
+            <div class="material-list">
+              <div class="material-item">
+                <div class="material-name">NN Lecture 01</div>
+                <a class="download-btn" href="./NN1.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">NN Lecture 02</div>
+                <a class="download-btn" href="./NN2.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">NN Lecture 03</div>
+                <a class="download-btn" href="./NN3.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">NN Lecture 04</div>
+                <a class="download-btn" href="./NN4.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">NN Lecture 05</div>
+                <a class="download-btn" href="./NN5.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">NN Lecture 06</div>
+                <a class="download-btn" href="./NN6.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">NN Lecture 07</div>
+                <a class="download-btn" href="./NN7.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">NN Lecture 08</div>
+                <a class="download-btn" href="./NN8.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">NN Lecture 09</div>
+                <a class="download-btn" href="./NN9.pdf" download>Download PDF</a>
+              </div>
+              <div class="material-item">
+                <div class="material-name">NN Lecture 10</div>
+                <a class="download-btn" href="./NN10.pdf" download>Download PDF</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer-note">This page is the central access point for the Spring 2026 lecture materials.</p>
+    </section>
+  </div>
+</body>
+
+</html>
