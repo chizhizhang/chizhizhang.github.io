@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Fall 2026 course page for Pattern Recognition and Machine Learning, including course overview and PDF lecture downloads.">
+  <title>Pattern Recognition and Machine Learning | Fall 2026</title>
+  <link rel="icon" type="image/png" href="../../logo/CCZlogo_32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f8fc;
+      --panel: rgba(255, 255, 255, 0.96);
+      --ink: #14324f;
+      --muted: #54708a;
+      --line: rgba(72, 124, 184, 0.14);
+      --line-strong: rgba(72, 124, 184, 0.22);
+      --blue: #1f6fbe;
+      --blue-deep: #155a9c;
+      --sky: #eaf3ff;
+      --mint: #edf8f4;
+      --shadow: 0 18px 42px rgba(68, 109, 158, 0.08);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Source Sans 3", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(214, 233, 255, 0.5), rgba(214, 233, 255, 0) 26%),
+        linear-gradient(180deg, #f1f6fb 0%, #f7fbff 42%, #f4f8fc 100%);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page-shell {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 52px;
+    }
+
+    .hero,
+    .panel,
+    .materials-board {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 28px;
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(239, 246, 255, 0.94) 60%, rgba(244, 250, 247, 0.94));
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 26px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.96rem;
+      font-weight: 600;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--sky);
+      border: 1px solid var(--line);
+      color: var(--blue);
+      font-family: "Montserrat", "Source Sans 3", sans-serif;
+      font-weight: 700;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      color: var(--blue-deep);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .back-link:hover,
+    .back-link:focus {
+      transform: translateY(-1px);
+      border-color: var(--line-strong);
+      background: var(--sky);
+      text-decoration: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.8fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--sky);
+      color: var(--blue-deep);
+      font-family: "Montserrat", "Source Sans 3", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-copy h1 {
+      margin: 16px 0 12px;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: clamp(2.25rem, 4.6vw, 3.7rem);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-copy p {
+      margin: 0;
+      max-width: 60ch;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .hero-meta {
+      display: grid;
+      gap: 12px;
+    }
+
+    .meta-item {
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .meta-label {
+      color: var(--muted);
+      font-family: "Montserrat", "Source Sans 3", sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .meta-value {
+      margin-top: 6px;
+      color: var(--ink);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .panel,
+    .materials-board {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(242, 248, 255, 0.95) 56%, rgba(245, 251, 248, 0.94));
+      box-shadow: var(--shadow);
+    }
+
+    .section-label {
+      margin-bottom: 10px;
+      color: var(--blue-deep);
+      font-family: "Montserrat", "Source Sans 3", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .panel h2,
+    .materials-header h2,
+    .materials-board h3,
+    .materials-module h3 {
+      margin: 0 0 12px;
+      font-family: "Source Serif 4", Georgia, serif;
+      line-height: 1.18;
+    }
+
+    .panel h2 {
+      font-size: 1.72rem;
+    }
+
+    .panel p,
+    .materials-header p,
+    .materials-board p,
+    .materials-module p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.78;
+    }
+
+    .panel ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.82;
+    }
+
+    .materials {
+      margin-top: 26px;
+    }
+
+    .materials-header {
+      margin-bottom: 14px;
+    }
+
+    .materials-header h2 {
+      font-size: 2rem;
+    }
+
+    .materials-board h3 {
+      font-size: 1.5rem;
+    }
+
+    .materials-board > p {
+      margin-bottom: 18px;
+    }
+
+    .materials-module-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .materials-module {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(72, 124, 184, 0.1);
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .materials-module h3 {
+      font-size: 1.34rem;
+      margin-bottom: 8px;
+    }
+
+    .materials-module p {
+      margin-bottom: 14px;
+    }
+
+    .material-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .material-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(72, 124, 184, 0.1);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .material-name {
+      margin: 0;
+      color: var(--ink);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 132px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(30, 107, 184, 0.16);
+      background: linear-gradient(180deg, #2376c9, #165ea4);
+      color: #ffffff;
+      text-decoration: none;
+      font-family: "Montserrat", "Source Sans 3", sans-serif;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+      box-shadow: 0 12px 24px rgba(30, 107, 184, 0.16);
+    }
+
+    .download-btn:hover,
+    .download-btn:focus {
+      transform: translateY(-1px);
+      filter: brightness(1.03);
+      text-decoration: none;
+    }
+
+    .material-status {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .footer-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.72;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .section-grid,
+      .materials-module-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page-shell {
+        width: min(100% - 20px, 1080px);
+        padding-top: 16px;
+      }
+
+      .hero,
+      .panel,
+      .materials-board {
+        padding: 20px;
+      }
+
+      .hero-top {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .material-item {
+        grid-template-columns: 1fr;
+      }
+
+      .download-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <div class="hero-top">
+        <div class="brand">
+          <span class="brand-mark">ML</span>
+          <span>Chizhi Chris ZHANG | Course Materials</span>
+        </div>
+        <a class="back-link" href="../../index.html#teaching">Back to Teaching</a>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Fall 2026</div>
+          <h1>Pattern Recognition and Machine Learning</h1>
+          <p>This page provides the course overview and lecture materials for the fall semester of the
+            2026–2027 academic year. Follow the lecture sequence below for preparation, practice, and review.</p>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <div class="meta-label">Instructor</div>
+            <div class="meta-value">Chizhi Chris ZHANG</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Affiliation</div>
+            <div class="meta-value">Advanced Computing and Digital Technology Research Center,<br>
+              University of Chinese Academy of Sciences</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Course Structure</div>
+            <div class="meta-value">18 teaching meetings, followed by review and an open-book examination.</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section-grid" aria-label="Course overview and schedule">
+      <article class="panel">
+        <div class="section-label">Course Overview</div>
+        <h2>Learning from examples.</h2>
+        <p>The opening lectures introduce learning from examples and move from lunch orders to data analysis,
+          with a practical environment for NumPy, Pandas, and exploratory data analysis.</p>
+      </article>
+      <article class="panel">
+        <div class="section-label">Course Schedule</div>
+        <h2>20 meetings across the semester.</h2>
+        <ul>
+          <li><strong>Meetings 1–18:</strong> teaching.</li>
+          <li><strong>Meeting 19:</strong> review.</li>
+          <li><strong>Meeting 20:</strong> open-book examination.</li>
+        </ul>
+      </article>
+    </section>
+    <section class="materials" aria-labelledby="lecture-materials">
+      <div class="materials-header">
+        <div class="section-label">Lecture Materials</div>
+        <h2 id="lecture-materials">Download Lecture Notes</h2>
+        <p>Lectures 01 and 02 are available as PDFs. Materials for Lectures 03–18 will be added as the course progresses.</p>
+      </div>
+      <div class="materials-board">
+        <div class="material-list">
+          <div class="material-item">
+            <div class="material-name">Lecture 01 — Overview: Learning from Examples</div>
+            <a class="download-btn" href="./L01_Overview.pdf" download aria-label="Download Lecture 01 PDF">Download PDF</a>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 02 — From Lunch Orders to Data Analysis</div>
+            <a class="download-btn" href="./L02_Environment_NumPy_Pandas_EDA.pdf" download aria-label="Download Lecture 02 PDF">Download PDF</a>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 03 — Generative Classifiers</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 04 — Discriminative Classifiers I</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 05 — Discriminative Classifiers II</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 06 — Feature Engineering</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 07 — Statistical Learning Theory</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 08 — Linear Models</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 09 — Support Vector Machines</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 10 — Clustering</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 11 — Dimensionality Reduction</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 12 — Semi-Supervised Learning</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 13 — Bagging and Random Forests</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 14 — Boosting, GBDT, and Stacking</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 15 — Neural Networks and Backpropagation</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 16 — Vision and CNNs</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 17 — Deep Training and Applications</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+          <div class="material-item">
+            <div class="material-name">Lecture 18 — Sequences, Transformers, and New Advances</div>
+            <span class="material-status">Materials coming soon</span>
+          </div>
+        </div>
+      </div>
+      <p class="footer-note">This page is the central access point for the Fall 2026 lecture materials.</p>
+    </section>
+  </main>
+</body>
+
+</html>
