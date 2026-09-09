@@ -155,6 +155,18 @@
       display: inline-block
     }
 
+    #research-focus .editorial-row {
+      display: grid;
+      grid-template-columns: 4rem minmax(0, 1fr);
+      gap: .75rem;
+      padding: .8rem 0;
+    }
+
+    #research-focus .editorial-label,
+    #research-focus .editorial-copy p {
+      margin: 0;
+    }
+
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -197,14 +209,12 @@
               Chizhi Zhang
             </a>
           </div>
-          </button>
-          <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none"></div>
           <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
             <ul class="navbar-nav d-md-inline-flex">
               <li class="nav-item"><a class="nav-link active" href="#about"
                   data-target="#about">Profile</a></li>
               <li class="nav-item"><a class="nav-link" href="#research-focus"
-                  data-target="#research-focus"><span>Highlights</span></a></li>
+                  data-target="#research-focus"><span>News</span></a></li>
               <li class="nav-item"><a class="nav-link" href="#experience"
                   data-target="#experience"><span>Appointments</span></a></li>
               <li class="nav-item"><a class="nav-link nav-link-publications" href="#publications"
@@ -327,46 +337,80 @@
       <div class="container">
         <div class="row">
           <div class="section-heading col-12 mb-4 d-flex flex-column align-items-start">
-            <h1 class="mb-0">News &amp; Highlights</h1>
+            <h1 class="mb-0">News</h1>
           </div>
           <div class="col-12">
             <div class="editorial-stack">
               <div class="editorial-row">
-                <div class="editorial-label">2026</div>
+                <div class="editorial-label"><time datetime="2026">2026</time></div>
                 <div class="editorial-copy">
-                  <p>Published recent work on Bayesian partial pooling for early-stage lifetime prediction in <em>Journal of Dynamics, Monitoring and Diagnostics</em>.</p>
-                  <p><a href="https://ojs.istp-press.com/dmd/article/view/1320">Article</a></p>
-                  <p>Published work on variable-length inspection scheduling and condition-based maintenance of VCSELs in <em>Reliability Engineering &amp; System Safety</em>.</p>
-                  <p><a href="https://www.sciencedirect.com/science/article/pii/S0951832026008483">ScienceDirect</a> · <a href="./src/">Data and scripts</a></p>
+                  <p>Supervised students who received a Best Paper Award at the International Conference on System Reliability and Safety Engineering (SRSE 2026).</p>
                 </div>
               </div>
               <div class="editorial-row">
-                <div class="editorial-label">2024</div>
+                <div class="editorial-label"><time datetime="2026">2026</time></div>
                 <div class="editorial-copy">
-                  <p>Presented recent work on acoustophoretic separation of circulating tumor cells at the 15th
-                    International Conference on Hydrodynamics in Rome.</p>
+                  <p><a href="./lecture/2026PRML/">Pattern Recognition and Machine Learning</a> course materials are available for the fall semester of the 2026–2027 academic year.</p>
                 </div>
               </div>
               <div class="editorial-row">
-                <div class="editorial-label">2023</div>
+                <div class="editorial-label"><time datetime="2026">2026</time></div>
                 <div class="editorial-copy">
-                  <p>Began the current academic stage at CIOMP and UCAS, bringing together digital engineering,
-                    signal processing, PHM, and doctoral supervision.</p>
+                  <p>Published work on Bayesian partial pooling for early-stage lifetime prediction in <em>Journal of Dynamics, Monitoring and Diagnostics</em>. <a href="https://ojs.istp-press.com/dmd/article/view/1320">Article</a>.</p>
                 </div>
               </div>
               <div class="editorial-row">
-                <div class="editorial-label">2023</div>
+                <div class="editorial-label"><time datetime="2026">2026</time></div>
                 <div class="editorial-copy">
-                  <p>Selected for the Hundred Talents Program of the Chinese Academy of Sciences.</p>
+                  <p>Published work on variable-length inspection scheduling and condition-based maintenance of VCSELs in <em>Reliability Engineering &amp; System Safety</em>. <a href="https://www.sciencedirect.com/science/article/pii/S0951832026008483">Article</a> · <a href="./src/">Data and scripts</a>.</p>
                 </div>
               </div>
               <div class="editorial-row">
-                <div class="editorial-label">2024--2025 Awards</div>
+                <div class="editorial-label"><time datetime="2025">2025</time></div>
                 <div class="editorial-copy">
-                  <p><strong>Chinese Academy of Sciences Hundred Talents Program</strong>, 2024--2027.</p>
-                  <p><strong>Jilin Province Overseas High-Level Young Talent Program (Changbai Talent Program)</strong>, 2024--2029.</p>
-                  <p><strong>Jilin Province Provincial Talent Program D</strong>, 2025--2030.</p>
-                  <p><strong>Conference distinctions:</strong> Best Paper Award at DOCS 2025; Best Paper Award at SRSE 2025; student supervision leading to Best Student Paper Award and Best Session Presentation at SRSE 2025.</p>
+                  <p>Received a Best Paper Award at DOCS 2025.</p>
+                </div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2025">2025</time></div>
+                <div class="editorial-copy">
+                  <p>Received a Best Paper Award at SRSE 2025.</p>
+                </div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2025">2025</time></div>
+                <div class="editorial-copy">
+                  <p>Supervised students who received a Best Student Paper Award and Best Session Presentation at SRSE 2025.</p>
+                </div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2025">2025</time></div>
+                <div class="editorial-copy">
+                  <p>Selected for the Jilin Province Provincial Talent Program D (2025–2030).</p>
+                </div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2024">2024</time></div>
+                <div class="editorial-copy">
+                  <p>Presented work on acoustophoretic separation of circulating tumor cells at the 15th International Conference on Hydrodynamics in Rome.</p>
+                </div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2024">2024</time></div>
+                <div class="editorial-copy">
+                  <p>Appointed Associate Professor at the Changchun Institute of Optics, Fine Mechanics and Physics (CIOMP), Chinese Academy of Sciences.</p>
+                </div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2024">2024</time></div>
+                <div class="editorial-copy">
+                  <p>Selected for the Jilin Province Overseas High-Level Young Talent Program (Changbai Talent Program, 2024–2029).</p>
+                </div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2023">2023</time></div>
+                <div class="editorial-copy">
+                  <p>Selected for the Chinese Academy of Sciences Hundred Talents Program (program period: 2024–2027).</p>
                 </div>
               </div>
             </div>
