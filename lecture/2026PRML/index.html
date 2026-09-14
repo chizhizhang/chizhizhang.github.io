@@ -314,8 +314,9 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 132px;
-      padding: 10px 16px;
+      width: 44px;
+      height: 44px;
+      padding: 10px;
       border-radius: 999px;
       border: 1px solid rgba(30, 107, 184, 0.16);
       background: linear-gradient(180deg, #2376c9, #165ea4);
@@ -375,11 +376,7 @@
       }
 
       .material-item {
-        grid-template-columns: 1fr;
-      }
-
-      .download-btn {
-        width: 100%;
+        grid-template-columns: minmax(0, 1fr) auto;
       }
     }
   </style>
@@ -449,43 +446,43 @@
         <div class="material-list">
           <div class="material-item">
             <div class="material-name">Lecture 01 — Overview: Learning from Examples</div>
-            <a class="download-btn" href="./L01_Overview.pdf" download aria-label="Download Lecture 01 PDF">Download PDF</a>
+            <a class="download-btn" href="./L01_Overview.pdf" download aria-label="Download Lecture 01 PDF" title="Download Lecture 01 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
           </div>
           <div class="material-item">
             <div class="material-name">Lecture 02 — From Lunch Orders to Data Analysis</div>
-            <a class="download-btn" href="./L02_Environment_NumPy_Pandas_EDA.pdf" download aria-label="Download Lecture 02 PDF">Download PDF</a>
+            <a class="download-btn" href="./L02_Environment_NumPy_Pandas_EDA.pdf" download aria-label="Download Lecture 02 PDF" title="Download Lecture 02 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
           </div>
           <div class="material-item">
             <div class="material-name">Lecture 03 — Generative Classifiers and Bayesian Decisions</div>
-            <a class="download-btn" href="./L03_Generative_Classifiers.pdf" download aria-label="Download Lecture 03 PDF">Download PDF</a>
+            <a class="download-btn" href="./L03_Generative_Classifiers.pdf" download aria-label="Download Lecture 03 PDF" title="Download Lecture 03 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
           </div>
           <div class="material-item">
             <div class="material-name">Lecture 04 — Discriminative Classifiers I: Linear, Generalized, Piecewise, and Fisher</div>
-            <a class="download-btn" href="./L04_Discriminative_Classifiers_I.pdf" download aria-label="Download Lecture 04 PDF">Download PDF</a>
+            <a class="download-btn" href="./L04_Discriminative_Classifiers_I.pdf" download aria-label="Download Lecture 04 PDF" title="Download Lecture 04 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
           </div>
           <div class="material-item">
             <div class="material-name">Lecture 05 — Discriminative Classifiers II: Perceptrons and Decision Trees</div>
-            <a class="download-btn" href="./L05_Discriminative_Classifiers_II.pdf" download aria-label="Download Lecture 05 PDF">Download PDF</a>
+            <a class="download-btn" href="./L05_Discriminative_Classifiers_II.pdf" download aria-label="Download Lecture 05 PDF" title="Download Lecture 05 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
           </div>
           <div class="material-item">
             <div class="material-name">Lecture 06 — Feature Engineering: Transformation, Construction, and Selection</div>
-            <a class="download-btn" href="./L06_Feature_Engineering.pdf" download aria-label="Download Lecture 06 PDF">Download PDF</a>
+            <a class="download-btn" href="./L06_Feature_Engineering.pdf" download aria-label="Download Lecture 06 PDF" title="Download Lecture 06 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
           </div>
           <div class="material-item">
             <div class="material-name">Lecture 07 — Foundations of Statistical Learning Theory</div>
-            <a class="download-btn" href="./L07_Statistical_Learning_Theory.pdf" download aria-label="Download Lecture 07 PDF">Download PDF</a>
+            <a class="download-btn" href="./L07_Statistical_Learning_Theory.pdf" download aria-label="Download Lecture 07 PDF" title="Download Lecture 07 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
           </div>
           <div class="material-item">
             <div class="material-name">Lecture 08 — Linear Models for Regression and Classification</div>
-            <a class="download-btn" href="./L08_Linear_Models.pdf" download aria-label="Download Lecture 08 PDF">Download PDF</a>
+            <a class="download-btn" href="./L08_Linear_Models.pdf" download aria-label="Download Lecture 08 PDF" title="Download Lecture 08 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
           </div>
           <div class="material-item">
             <div class="material-name">Lecture 09 — Support Vector Machines for Classification and Regression</div>
-            <a class="download-btn" href="./L09_Support_Vector_Machines.pdf" download aria-label="Download Lecture 09 PDF">Download PDF</a>
+            <a class="download-btn" href="./L09_Support_Vector_Machines.pdf" download aria-label="Download Lecture 09 PDF" title="Download Lecture 09 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
           </div>
           <div class="material-item">
             <div class="material-name">Lecture 10 — Clustering: Distance, Evaluation, and Classical Algorithms</div>
-            <a class="download-btn" href="./L10_Clustering.pdf" download aria-label="Download Lecture 10 PDF">Download PDF</a>
+            <a class="download-btn" href="./L10_Clustering.pdf" download aria-label="Download Lecture 10 PDF" title="Download Lecture 10 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
           </div>
           <div class="material-item">
             <div class="material-name">Lecture 11 — Dimensionality Reduction</div>
