@@ -143,7 +143,6 @@
         "python scripts/generate_figures.py"
       ],
       "language": "Python",
-      "version": "R2-20261002",
       "bytes": 4521905,
       "sha256": "4a5003abfa592ade8e2d3166fb70c186688144f7b57292d45401a21e9d6cb633",
       "updated": "2026-10-02",

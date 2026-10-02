@@ -8,7 +8,7 @@ registry automatically; no HTML changes are needed for another project.
 Required record fields: id (public topic slug), referenceNumber, authors, venue,
 referenceDetails, title, short, journal, status, area, file,
 description, includes (array), data, commands (array), language, bytes,
-sha256 and updated. article and version are optional.
+sha256 and updated. article is optional.
 
 Retain published archive URLs when updating the library. Use new versioned
 filenames when the content changes. Verify the ZIP opens, the README matches
