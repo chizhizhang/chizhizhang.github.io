@@ -1,0 +1,156 @@
+{
+  "updated": "2026-10-02",
+  "projects": [
+    {
+      "id": "early-stage-lifetime",
+      "title": "Prefix Treatment and Bayesian Partial Pooling for Early-Stage Lifetime Prediction from Degradation Data",
+      "short": "Early-stage lifetime prediction",
+      "journal": "JDMD",
+      "status": "Published",
+      "area": "Reliability",
+      "file": "early-stage-lifetime-code.zip",
+      "description": "Bayesian partial pooling and prefix-based lifetime estimation for laser and battery degradation.",
+      "includes": [
+        "Laser analysis and figures",
+        "Battery analysis and figures"
+      ],
+      "data": "Code only. The original laser and Oxford battery inputs are required for full reruns.",
+      "commands": [
+        "python -m pip install -r requirements.txt",
+        "python scripts/final_laser_figures.py",
+        "python scripts/final_battery_figures.py"
+      ],
+      "language": "Python",
+      "bytes": 21687,
+      "sha256": "7b66b95838c0cfaee120b2f604b9cd156cfaf8002a283c225d62e32db7fd3e6d",
+      "updated": "2026-10-02",
+      "referenceNumber": 1,
+      "authors": "C. C. Zhang, X. Feng, and J. Jiang",
+      "venue": "Journal of Dynamics, Monitoring and Diagnostics",
+      "referenceDetails": "vol. 5, no. 2, pp. 117–130, May 2026",
+      "article": "https://ojs.istp-press.com/dmd/article/view/1320"
+    },
+    {
+      "id": "vcsel-inspection",
+      "title": "Variable-length multiobjective optimization of inspection schedules for condition-based maintenance of vertical-cavity surface-emitting lasers under imperfect detection",
+      "short": "VCSEL inspection optimization",
+      "journal": "RESS",
+      "status": "Published",
+      "area": "Reliability",
+      "file": "RESS202606.zip",
+      "description": "Single and multiple inspection decisions, fixed and variable-length schedules, and imperfect detection.",
+      "includes": [
+        "Processed study datasets",
+        "Four standalone case-study scripts"
+      ],
+      "data": "The existing public archive is preserved. It includes processed data and analysis scripts.",
+      "commands": [
+        "python scripts/case1_single_inspection_data.py",
+        "python scripts/case2_two_inspection_optimization.py",
+        "python scripts/case3_fixed_length_optimization.py",
+        "python scripts/case4_variable_length_optimization.py"
+      ],
+      "article": "https://www.sciencedirect.com/science/article/pii/S0951832026008483",
+      "language": "Python",
+      "bytes": 38343,
+      "sha256": "73551414de7373572854d615a6038891cafbf9edef8f8907abc70e6ea8ce6796",
+      "updated": "2026-10-02",
+      "referenceNumber": 2,
+      "authors": "C. C. Zhang, X. Feng, and H. Zhang",
+      "venue": "Reliability Engineering & System Safety",
+      "referenceDetails": "vol. 277, Art. no. 113039, 2026"
+    },
+    {
+      "id": "curved-layer-jones",
+      "title": "Rapid stress birefringence mapping in mounted curved lenses with a curved layer Jones approximation",
+      "short": "Curved-layer Jones optics",
+      "journal": "Optics Express",
+      "status": "Accepted",
+      "area": "Optics",
+      "file": "curved-layer-jones-code.zip",
+      "description": "A self-contained chain from elastic finite-element analysis to curved-layer Jones calculations and figure-ready outputs.",
+      "includes": [
+        "Finite-element and optical solver",
+        "Separate figure generator",
+        "Computed CSV and JSON tables"
+      ],
+      "data": "Numerical analysis runs without an external mesh or measured stress field. Archived computed tables support figure generation.",
+      "commands": [
+        "python -m pip install -r requirements.txt",
+        "python scripts/main.py --self-test",
+        "python scripts/main.py --mode quick",
+        "python scripts/main.py --mode paper",
+        "python scripts/figures.py"
+      ],
+      "language": "Python",
+      "bytes": 1899900,
+      "sha256": "5bb70f6fbd92ad2299b874a7d2ad136e8b3319f9e35c6cb498ffb9b04f08ef86",
+      "updated": "2026-10-02",
+      "referenceNumber": 3,
+      "authors": "C. C. Zhang, S. Zhang, H. Lou, J. Jiang, L. Sheng, and G. Markou",
+      "venue": "Optics Express",
+      "referenceDetails": "accepted for publication, 2026"
+    },
+    {
+      "id": "censored-nhhsmm",
+      "title": "Nonhomogeneous hidden semi-Markov modeling for censored accelerated degradation tests of blue laser diodes",
+      "short": "Censored blue-laser degradation",
+      "journal": "RESS",
+      "status": "Under review",
+      "area": "Reliability",
+      "file": "censored-nhhsmm-code.zip",
+      "description": "Covariate-dependent semi-Markov estimation, state-age filtering, and remaining-life prediction with censored laser histories.",
+      "includes": [
+        "Analysis and figure code",
+        "Model-generated pseudo-data",
+        "Computed results and plotting inputs"
+      ],
+      "data": "Pseudo-data are included for demonstration. Full measured-laser reruns require the original life-test records. See the archive README for the pseudo-data workflow.",
+      "commands": [
+        "python -m pip install -r scripts/requirements.txt",
+        "python -B scripts/main_analysis.py --quiet",
+        "python -B scripts/generate_figures.py"
+      ],
+      "language": "Python",
+      "bytes": 10678321,
+      "sha256": "05f56a715a7ce7435db6a391527d3269bc43e2b03e3106439de93e40a72ee4ac",
+      "updated": "2026-10-02",
+      "referenceNumber": 4,
+      "authors": "C. C. Zhang, X. Feng, and J. Jiang",
+      "venue": "Reliability Engineering & System Safety",
+      "referenceDetails": "submitted for publication, 2026"
+    },
+    {
+      "id": "segmental-viterbi",
+      "title": "Segmental Viterbi estimation using transition constraints for covariate-dependent hidden semi-Markov degradation models with right censoring",
+      "short": "Constrained segmental Viterbi",
+      "journal": "RESS",
+      "status": "Under review",
+      "area": "Reliability",
+      "file": "segmental-viterbi-code.zip",
+      "description": "Operational threshold constraints, exact segmental estimation, and filtering for ordered first-passage prediction.",
+      "includes": [
+        "Analysis and independent figure code",
+        "Reproducible fitted-model pseudo-data",
+        "Public HUST battery inputs",
+        "Plotting coordinates and native SVGs"
+      ],
+      "data": "The website release includes illustrative pseudo-data, not original laser measurements. A DOI archive deposit is planned at or before final acceptance.",
+      "commands": [
+        "python -m pip install -r requirements.txt",
+        "python scripts/generate_pseudo_data.py",
+        "python scripts/main_analysis.py smoke --output-dir outputs/example",
+        "python scripts/generate_figures.py"
+      ],
+      "language": "Python",
+      "version": "R2-20261002",
+      "bytes": 4521905,
+      "sha256": "4a5003abfa592ade8e2d3166fb70c186688144f7b57292d45401a21e9d6cb633",
+      "updated": "2026-10-02",
+      "referenceNumber": 5,
+      "authors": "C. C. Zhang, X. Feng, and J. Jiang",
+      "venue": "Reliability Engineering & System Safety",
+      "referenceDetails": "submitted for publication, 2026"
+    }
+  ]
+}
