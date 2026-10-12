@@ -342,23 +342,63 @@
             <div class="editorial-stack">
               <div class="editorial-row">
                 <div class="editorial-label"><time datetime="2026">2026</time></div>
-                <div class="editorial-copy"><p>New journal articles in <em>Reliability Engineering &amp; System Safety</em> and <em>Optics Express</em>. <a href="./publications/">Full publications</a>.</p></div>
+                <div class="editorial-copy"><p>Granted a Chinese invention patent for stress birefringence analysis.</p></div>
               </div>
               <div class="editorial-row">
                 <div class="editorial-label"><time datetime="2026">2026</time></div>
-                <div class="editorial-copy"><p>Our student paper “Task-Aligned Variational CPAE with Stacking Ensemble Learning for CMP Material Removal Rate Prediction” received the Best Student Paper Award at SRSE 2026.</p></div>
+                <div class="editorial-copy"><p>Two <em>Optics Express</em> papers published on birefringence mapping and constrained lens optimisation.</p></div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2026">2026</time></div>
+                <div class="editorial-copy"><p>Segmental Viterbi degradation modelling published in <em>Reliability Engineering &amp; System Safety</em>.</p></div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2026">2026</time></div>
+                <div class="editorial-copy"><p>Our student paper received the Best Student Paper Award at SRSE 2026.</p></div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2026">2026</time></div>
+                <div class="editorial-copy"><p><a href="./lecture/2026PRML/">Pattern Recognition and Machine Learning</a> course materials are now available.</p></div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2026">2026</time></div>
+                <div class="editorial-copy"><p>Early-stage lifetime prediction published in <em>Journal of Dynamics, Monitoring and Diagnostics</em>.</p></div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2026">2026</time></div>
+                <div class="editorial-copy"><p>VCSEL inspection optimisation published in <em>Reliability Engineering &amp; System Safety</em>.</p></div>
               </div>
               <div class="editorial-row">
                 <div class="editorial-label"><time datetime="2025">2025</time></div>
-                <div class="editorial-copy"><p>Our papers received Best Paper Awards at DOCS 2025 and SRSE 2025.</p></div>
+                <div class="editorial-copy"><p>Our portfolio optimisation paper received the Best Paper Award at DOCS 2025.</p></div>
               </div>
               <div class="editorial-row">
                 <div class="editorial-label"><time datetime="2025">2025</time></div>
-                <div class="editorial-copy"><p>My student Zunxiang Wang received the Best Student Paper Award at SRSE 2025 for “Phase-Modulated LSTM for the Degradation Prediction of Chemical Mechanical Planarization.”</p></div>
+                <div class="editorial-copy"><p>Our AI-based laser reliability paper received the Best Paper Award at SRSE 2025.</p></div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2025">2025</time></div>
+                <div class="editorial-copy"><p>Zunxiang Wang received the Best Student Paper Award at SRSE 2025.</p></div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2025">2025</time></div>
+                <div class="editorial-copy"><p>Our optical maintenance study received Best Session Presentation at SRSE 2025.</p></div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2025">2025</time></div>
+                <div class="editorial-copy"><p>Recognised as a Jilin Province High-Level Talent (Category D).</p></div>
               </div>
               <div class="editorial-row">
                 <div class="editorial-label"><time datetime="2024">2024</time></div>
-                <div class="editorial-copy"><p>Appointed Associate Professor at the Changchun Institute of Optics, Fine Mechanics and Physics, Chinese Academy of Sciences.</p></div>
+                <div class="editorial-copy"><p>Appointed Associate Professor at CIOMP, Chinese Academy of Sciences.</p></div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2024">2024</time></div>
+                <div class="editorial-copy"><p>Selected for the Changbai Talent Program for Overseas Young Talents.</p></div>
+              </div>
+              <div class="editorial-row">
+                <div class="editorial-label"><time datetime="2023">2023</time></div>
+                <div class="editorial-copy"><p>Selected for the Chinese Academy of Sciences Young Talents Program.</p></div>
               </div>
             </div>
           </div>
@@ -1050,11 +1090,15 @@
 
       if (mapContainer && window.L) {
         const ciompLocation = [43.847411, 125.400904];
-        const map = L.map("contact-map", { scrollWheelZoom: false }).setView(ciompLocation, 14);
+        const map = L.map("contact-map", { scrollWheelZoom: false }).setView(ciompLocation, 10);
 
         L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
           maxZoom: 16,
-          attribution: "Tiles &copy; Esri &mdash; Esri, HERE, Garmin, OpenStreetMap contributors, and the GIS user community"
+          attribution: "&copy; Esri, HERE, Garmin, OpenStreetMap contributors"
+        }).addTo(map);
+        L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}", {
+          maxZoom: 16,
+          pane: "overlayPane"
         }).addTo(map);
 
         const ciompMarker = L.divIcon({
@@ -1065,8 +1109,7 @@
           popupAnchor: [0, -14]
         });
         L.marker(ciompLocation, { icon: ciompMarker, title: "CIOMP — 3888 Dong Nanhu Road" }).addTo(map)
-          .bindPopup("<strong>CIOMP, Chinese Academy of Sciences</strong><br>3888 Dong Nanhu Road, Changchun")
-          .openPopup();
+          .bindPopup("<strong>CIOMP, Chinese Academy of Sciences</strong><br>3888 Dong Nanhu Road, Changchun");
       }
 
       if (!publicationsLink || !publicationsSection) return;
