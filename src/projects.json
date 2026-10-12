@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02",
+  "updated": "2026-10-12",
   "projects": [
     {
       "id": "early-stage-lifetime",
@@ -25,7 +25,7 @@
       "sha256": "7b66b95838c0cfaee120b2f604b9cd156cfaf8002a283c225d62e32db7fd3e6d",
       "updated": "2026-10-02",
       "referenceNumber": 1,
-      "authors": "C. C. Zhang, X. Feng, and J. Jiang",
+      "authors": "C. C. Zhang*, X. Feng, and J. Jiang",
       "venue": "Journal of Dynamics, Monitoring and Diagnostics",
       "referenceDetails": "vol. 5, no. 2, pp. 117–130, May 2026",
       "article": "https://ojs.istp-press.com/dmd/article/view/1320"
@@ -56,16 +56,16 @@
       "sha256": "73551414de7373572854d615a6038891cafbf9edef8f8907abc70e6ea8ce6796",
       "updated": "2026-10-02",
       "referenceNumber": 2,
-      "authors": "C. C. Zhang, X. Feng, and H. Zhang",
+      "authors": "C. C. Zhang*, X. Feng, and H. Zhang",
       "venue": "Reliability Engineering & System Safety",
-      "referenceDetails": "vol. 277, Art. no. 113039, 2026"
+      "referenceDetails": "vol. 277, Art. no. 113039, 2027"
     },
     {
       "id": "curved-layer-jones",
-      "title": "Rapid stress birefringence mapping in mounted curved lenses with a curved layer Jones approximation",
+      "title": "Rapid stress birefringence mapping in mounted curved lenses with a curved-layer Jones approximation",
       "short": "Curved-layer Jones optics",
       "journal": "Optics Express",
-      "status": "Accepted",
+      "status": "Published",
       "area": "Optics",
       "file": "curved-layer-jones-code.zip",
       "description": "A self-contained chain from elastic finite-element analysis to curved-layer Jones calculations and figure-ready outputs.",
@@ -87,9 +87,10 @@
       "sha256": "5bb70f6fbd92ad2299b874a7d2ad136e8b3319f9e35c6cb498ffb9b04f08ef86",
       "updated": "2026-10-02",
       "referenceNumber": 3,
-      "authors": "C. C. Zhang, S. Zhang, H. Lou, J. Jiang, L. Sheng, and G. Markou",
+      "authors": "C. C. Zhang*, S. Zhang, H. Lou, J. Jiang, L. Sheng, and G. Markou",
       "venue": "Optics Express",
-      "referenceDetails": "accepted for publication, 2026"
+      "referenceDetails": "vol. 34, no. 21, pp. 39011–39027, 2026",
+      "article": "https://doi.org/10.1364/OE.614756"
     },
     {
       "id": "censored-nhhsmm",
@@ -125,7 +126,7 @@
       "title": "Segmental Viterbi estimation using transition constraints for covariate-dependent hidden semi-Markov degradation models with right censoring",
       "short": "Constrained segmental Viterbi",
       "journal": "RESS",
-      "status": "Under review",
+      "status": "Published",
       "area": "Reliability",
       "file": "segmental-viterbi-code.zip",
       "description": "Operational threshold constraints, exact segmental estimation, and filtering for ordered first-passage prediction.",
@@ -135,7 +136,7 @@
         "Public HUST battery inputs",
         "Plotting coordinates and native SVGs"
       ],
-      "data": "The website release includes illustrative pseudo-data, not original laser measurements. A DOI archive deposit is planned at or before final acceptance.",
+      "data": "The website release includes illustrative pseudo-data, not original laser measurements. See the archive README for the reproducibility workflow.",
       "commands": [
         "python -m pip install -r requirements.txt",
         "python scripts/generate_pseudo_data.py",
@@ -147,9 +148,10 @@
       "sha256": "4a5003abfa592ade8e2d3166fb70c186688144f7b57292d45401a21e9d6cb633",
       "updated": "2026-10-02",
       "referenceNumber": 5,
-      "authors": "C. C. Zhang, X. Feng, and J. Jiang",
+      "authors": "C. C. Zhang*, X. Feng, and J. Jiang",
       "venue": "Reliability Engineering & System Safety",
-      "referenceDetails": "submitted for publication, 2026"
+      "referenceDetails": "vol. 278, Art. no. 113615, 2027",
+      "article": "https://doi.org/10.1016/j.ress.2026.113615"
     }
   ]
 }

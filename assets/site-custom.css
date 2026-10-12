@@ -2766,3 +2766,31 @@ body.dark {
 .dark .data-mini-card ul {
   color: rgba(223, 236, 255, .76);
 }
+
+/* Research and academic service records */
+.research-records .editorial-row {
+  display: grid;
+  grid-template-columns: minmax(9rem, 12rem) minmax(0, 1fr);
+  gap: 1.5rem;
+}
+.research-records .editorial-label { font-weight: 600; }
+.research-records .editorial-copy p { margin: 0; }
+.research-subheading { margin: 2rem 0 .5rem; font-size: 1.35rem; }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .overview-stage-header,
+  .overview-keyline { grid-template-columns: 1fr; }
+  .overview-quote { max-width: none; }
+}
+#contact-map .leaflet-popup-content { color: #173759; line-height: 1.65; }
+.ciomp-map-marker span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background: #1565c0;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, .4);
+}
+@media (max-width: 767.98px) {
+  .research-records .editorial-row { grid-template-columns: 1fr; gap: .4rem; }
+}
