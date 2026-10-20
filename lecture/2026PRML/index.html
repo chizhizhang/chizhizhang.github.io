@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Fall 2026 course page for Pattern Recognition and Machine Learning, including course overview and PDF lecture downloads.">
+    content="Fall 2026 course page for Pattern Recognition and Machine Learning, including course overview, PDF lecture slides, and Chinese printable scripts.">
   <title>Pattern Recognition and Machine Learning | Fall 2026</title>
   <link rel="icon" type="image/png" href="../../logo/CCZlogo_32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -379,6 +379,14 @@
         grid-template-columns: minmax(0, 1fr) auto;
       }
     }
+
+    .material-actions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
+    .material-actions .download-btn { width:auto; min-width:54px; height:40px; padding:10px 13px; }
+    .material-actions .script-btn { background:var(--mint); color:var(--blue-deep); box-shadow:none; }
+    .course-downloads { margin-top:16px; }
+    .bundle-link { display:inline-flex; padding:12px 18px; border-radius:999px; background:var(--blue-deep); color:white; text-decoration:none; font-weight:600; }
+    .bundle-link:hover,.bundle-link:focus { background:var(--blue); }
+    @media (max-width:520px) { .material-item {grid-template-columns:minmax(0,1fr);} .material-actions {justify-content:flex-start;} .bundle-link {border-radius:16px;} }
   </style>
 </head>
 
@@ -439,82 +447,83 @@
     <section class="materials" aria-labelledby="lecture-materials">
       <div class="materials-header">
         <div class="section-label">Lecture Materials</div>
-        <h2 id="lecture-materials">Download Lecture Notes</h2>
-        <p>Lectures 01–18 are available as PDFs: 88–94 slides per lecture for three 45-minute class periods, with connected explanations, worked examples, and exercises. Updated 14 October 2026.</p>
+        <h2 id="lecture-materials">Lecture Slides and Printable Scripts</h2>
+        <p>Lectures 01–18 are available as PDF slides and Chinese printable scripts, with three 45-minute class periods per lecture. Updated 21 October 2026.</p>
+        <div class="course-downloads"><a class="bundle-link" href="./PRML_2026_L01-L18_20261020.zip?v=20261021" download>Download all 18 lectures and scripts (ZIP · 31.3 MB)</a></div>
       </div>
       <div class="materials-board">
         <div class="material-list">
           <div class="material-item">
-            <div class="material-name">Lecture 01 — Overview: Learning from Examples <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 88 slides</span></div>
-            <a class="download-btn" href="./L01_Overview.pdf?v=20261014r2" download aria-label="Download Lecture 01 PDF" title="Download Lecture 01 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 01 — Overview: Learning from Examples <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 101 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L01_Overview.pdf?v=20261021" download aria-label="Download Lecture 01 PDF slides" title="Download Lecture 01 PDF slides">PDF</a><a class="download-btn script-btn" href="./L01_Overview_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 01 Chinese printable script" title="Download Lecture 01 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 02 — From Lunch Orders to Data Analysis <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 88 slides</span></div>
-            <a class="download-btn" href="./L02_Environment_NumPy_Pandas_EDA.pdf?v=20261014r2" download aria-label="Download Lecture 02 PDF" title="Download Lecture 02 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 02 — From Lunch Orders to Data Analysis <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 99 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L02_Environment_NumPy_Pandas_EDA.pdf?v=20261021" download aria-label="Download Lecture 02 PDF slides" title="Download Lecture 02 PDF slides">PDF</a><a class="download-btn script-btn" href="./L02_Environment_NumPy_Pandas_EDA_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 02 Chinese printable script" title="Download Lecture 02 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 03 — Generative Classifiers and Bayesian Decisions <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 92 slides</span></div>
-            <a class="download-btn" href="./L03_Generative_Classifiers.pdf?v=20261014r2" download aria-label="Download Lecture 03 PDF" title="Download Lecture 03 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 03 — Generative Classifiers and Bayesian Decisions <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 108 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L03_Generative_Classifiers.pdf?v=20261021" download aria-label="Download Lecture 03 PDF slides" title="Download Lecture 03 PDF slides">PDF</a><a class="download-btn script-btn" href="./L03_Generative_Classifiers_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 03 Chinese printable script" title="Download Lecture 03 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 04 — Discriminative Classifiers I: Linear, Generalized, Piecewise, and Fisher <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 94 slides</span></div>
-            <a class="download-btn" href="./L04_Discriminative_Classifiers_I.pdf?v=20261014r2" download aria-label="Download Lecture 04 PDF" title="Download Lecture 04 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 04 — Discriminative Classifiers I: Linear, Generalized, Piecewise, and Fisher <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 111 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L04_Discriminative_Classifiers_I.pdf?v=20261021" download aria-label="Download Lecture 04 PDF slides" title="Download Lecture 04 PDF slides">PDF</a><a class="download-btn script-btn" href="./L04_Discriminative_Classifiers_I_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 04 Chinese printable script" title="Download Lecture 04 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 05 — Discriminative Classifiers II: Perceptrons and Decision Trees <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 88 slides</span></div>
-            <a class="download-btn" href="./L05_Discriminative_Classifiers_II.pdf?v=20261014r2" download aria-label="Download Lecture 05 PDF" title="Download Lecture 05 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 05 — Discriminative Classifiers II: Perceptrons and Decision Trees <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 101 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L05_Discriminative_Classifiers_II.pdf?v=20261021" download aria-label="Download Lecture 05 PDF slides" title="Download Lecture 05 PDF slides">PDF</a><a class="download-btn script-btn" href="./L05_Discriminative_Classifiers_II_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 05 Chinese printable script" title="Download Lecture 05 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 06 — Feature Engineering: Transformation, Construction, and Selection <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 88 slides</span></div>
-            <a class="download-btn" href="./L06_Feature_Engineering.pdf?v=20261014r2" download aria-label="Download Lecture 06 PDF" title="Download Lecture 06 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 06 — Feature Engineering: Transformation, Construction, and Selection <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 100 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L06_Feature_Engineering.pdf?v=20261021" download aria-label="Download Lecture 06 PDF slides" title="Download Lecture 06 PDF slides">PDF</a><a class="download-btn script-btn" href="./L06_Feature_Engineering_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 06 Chinese printable script" title="Download Lecture 06 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 07 — Foundations of Statistical Learning Theory <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 92 slides</span></div>
-            <a class="download-btn" href="./L07_Statistical_Learning_Theory.pdf?v=20261014r2" download aria-label="Download Lecture 07 PDF" title="Download Lecture 07 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 07 — Foundations of Statistical Learning Theory <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 104 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L07_Statistical_Learning_Theory.pdf?v=20261021" download aria-label="Download Lecture 07 PDF slides" title="Download Lecture 07 PDF slides">PDF</a><a class="download-btn script-btn" href="./L07_Statistical_Learning_Theory_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 07 Chinese printable script" title="Download Lecture 07 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 08 — Linear Models for Regression and Classification <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 92 slides</span></div>
-            <a class="download-btn" href="./L08_Linear_Models.pdf?v=20261014r2" download aria-label="Download Lecture 08 PDF" title="Download Lecture 08 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 08 — Linear Models for Regression and Classification <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 106 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L08_Linear_Models.pdf?v=20261021" download aria-label="Download Lecture 08 PDF slides" title="Download Lecture 08 PDF slides">PDF</a><a class="download-btn script-btn" href="./L08_Linear_Models_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 08 Chinese printable script" title="Download Lecture 08 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 09 — Support Vector Machines for Classification and Regression <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 90 slides</span></div>
-            <a class="download-btn" href="./L09_Support_Vector_Machines.pdf?v=20261014r2" download aria-label="Download Lecture 09 PDF" title="Download Lecture 09 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 09 — Support Vector Machines for Classification and Regression <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 101 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L09_Support_Vector_Machines.pdf?v=20261021" download aria-label="Download Lecture 09 PDF slides" title="Download Lecture 09 PDF slides">PDF</a><a class="download-btn script-btn" href="./L09_Support_Vector_Machines_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 09 Chinese printable script" title="Download Lecture 09 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 10 — Clustering: Distance, Evaluation, and Classical Algorithms <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 90 slides</span></div>
-            <a class="download-btn" href="./L10_Clustering.pdf?v=20261014r2" download aria-label="Download Lecture 10 PDF" title="Download Lecture 10 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 10 — Clustering: Distance, Evaluation, and Classical Algorithms <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 104 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L10_Clustering.pdf?v=20261021" download aria-label="Download Lecture 10 PDF slides" title="Download Lecture 10 PDF slides">PDF</a><a class="download-btn script-btn" href="./L10_Clustering_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 10 Chinese printable script" title="Download Lecture 10 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 11 — Dimensionality Reduction <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 90 slides</span></div>
-            <a class="download-btn" href="./L11_Dimensionality_Reduction.pdf?v=20261014r2" download aria-label="Download Lecture 11 PDF" title="Download Lecture 11 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 11 — Dimensionality Reduction <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 102 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L11_Dimensionality_Reduction.pdf?v=20261021" download aria-label="Download Lecture 11 PDF slides" title="Download Lecture 11 PDF slides">PDF</a><a class="download-btn script-btn" href="./L11_Dimensionality_Reduction_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 11 Chinese printable script" title="Download Lecture 11 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 12 — Semi-Supervised Learning <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 90 slides</span></div>
-            <a class="download-btn" href="./L12_Semi_Supervised_Learning.pdf?v=20261014r2" download aria-label="Download Lecture 12 PDF" title="Download Lecture 12 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 12 — Semi-Supervised Learning <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 104 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L12_Semi_Supervised_Learning.pdf?v=20261021" download aria-label="Download Lecture 12 PDF slides" title="Download Lecture 12 PDF slides">PDF</a><a class="download-btn script-btn" href="./L12_Semi_Supervised_Learning_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 12 Chinese printable script" title="Download Lecture 12 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 13 — Bagging and Random Forests <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 90 slides</span></div>
-            <a class="download-btn" href="./L13_Bagging_and_Random_Forests.pdf?v=20261014r2" download aria-label="Download Lecture 13 PDF" title="Download Lecture 13 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 13 — Bagging and Random Forests <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 102 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L13_Bagging_and_Random_Forests.pdf?v=20261021" download aria-label="Download Lecture 13 PDF slides" title="Download Lecture 13 PDF slides">PDF</a><a class="download-btn script-btn" href="./L13_Bagging_and_Random_Forests_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 13 Chinese printable script" title="Download Lecture 13 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 14 — Boosting, GBDT, and Stacking <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 90 slides</span></div>
-            <a class="download-btn" href="./L14_Boosting_GBDT_Stacking.pdf?v=20261014r2" download aria-label="Download Lecture 14 PDF" title="Download Lecture 14 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 14 — Boosting, GBDT, and Stacking <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 105 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L14_Boosting_GBDT_Stacking.pdf?v=20261021" download aria-label="Download Lecture 14 PDF slides" title="Download Lecture 14 PDF slides">PDF</a><a class="download-btn script-btn" href="./L14_Boosting_GBDT_Stacking_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 14 Chinese printable script" title="Download Lecture 14 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 15 — Neural Networks and Backpropagation <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 90 slides</span></div>
-            <a class="download-btn" href="./L15_Neural_Networks_and_Backpropagation.pdf?v=20261014r2" download aria-label="Download Lecture 15 PDF" title="Download Lecture 15 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 15 — Neural Networks and Backpropagation <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 102 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L15_Neural_Networks_and_Backpropagation.pdf?v=20261021" download aria-label="Download Lecture 15 PDF slides" title="Download Lecture 15 PDF slides">PDF</a><a class="download-btn script-btn" href="./L15_Neural_Networks_and_Backpropagation_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 15 Chinese printable script" title="Download Lecture 15 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 16 — Vision and CNNs <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 90 slides</span></div>
-            <a class="download-btn" href="./L16_Vision_and_CNNs.pdf?v=20261014r2" download aria-label="Download Lecture 16 PDF" title="Download Lecture 16 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 16 — Vision and CNNs <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 103 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L16_Vision_and_CNNs.pdf?v=20261021" download aria-label="Download Lecture 16 PDF slides" title="Download Lecture 16 PDF slides">PDF</a><a class="download-btn script-btn" href="./L16_Vision_and_CNNs_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 16 Chinese printable script" title="Download Lecture 16 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 17 — Deep Training and Applications <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 90 slides</span></div>
-            <a class="download-btn" href="./L17_Deep_Training_and_Applications.pdf?v=20261014r2" download aria-label="Download Lecture 17 PDF" title="Download Lecture 17 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 17 — Deep Training and Applications <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 104 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L17_Deep_Training_and_Applications.pdf?v=20261021" download aria-label="Download Lecture 17 PDF slides" title="Download Lecture 17 PDF slides">PDF</a><a class="download-btn script-btn" href="./L17_Deep_Training_and_Applications_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 17 Chinese printable script" title="Download Lecture 17 Chinese printable script">Word</a></div>
           </div>
           <div class="material-item">
-            <div class="material-name">Lecture 18 — Sequences, Transformers, and New Advances <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 90 slides</span></div>
-            <a class="download-btn" href="./L18_Sequences_Transformers_and_New_Advances.pdf?v=20261014r2" download aria-label="Download Lecture 18 PDF" title="Download Lecture 18 PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"></path></svg></a>
+            <div class="material-name">Lecture 18 — Sequences, Transformers, and New Advances <span style="font-size:0.85em;color:var(--muted);white-space:nowrap">· 108 slides</span></div>
+            <div class="material-actions"><a class="download-btn" href="./L18_Sequences_Transformers_and_New_Advances.pdf?v=20261021" download aria-label="Download Lecture 18 PDF slides" title="Download Lecture 18 PDF slides">PDF</a><a class="download-btn script-btn" href="./L18_Sequences_Transformers_and_New_Advances_Chinese_Speaker_Notes.docx?v=20261021" download aria-label="Download Lecture 18 Chinese printable script" title="Download Lecture 18 Chinese printable script">Word</a></div>
           </div>
         </div>
       </div>
