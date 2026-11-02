@@ -39,7 +39,8 @@ The dataset cards provide the English descriptions, variable definitions,
 and the associated article's IEEE citation. All three are explicitly labeled
 pseudo data based on original measurements, for testing and benchmarking
 under simulated conditions only. Source attribution is visible on each card.
-The 455 nm citation identifies a submitted manuscript without inventing a DOI.
+The 455 nm dataset cites the published RESS article on Segmental Viterbi estimation
+(doi: 10.1016/j.ress.2026.113615).
 
 The five existing research-code archives retain their URLs and byte contents.
 Verify archive contents, counts, checksums, citations, downloads and mobile

@@ -339,7 +339,7 @@
           "url": "https://www.ceprei.com/"
         }
       ],
-      "description": "This pseudo dataset contains 20 generated blue-laser degradation trajectories based on 19 original life-test records at 3.0, 3.5, 4.0, and 4.5 A. The source tests used a 25 °C water-cooling setpoint. Each trajectory covers 0–500 h at 0.5 h intervals, with optical power, current, voltage, wavelength, and bandwidth. Low-output spectral fluctuations follow the patterns in the original instrument records.",
+      "description": "This pseudo dataset contains 20 generated blue-laser degradation trajectories at 3.0, 3.5, 4.0, and 4.5 A. The source tests used a 25 °C water-cooling setpoint. Each trajectory covers 0–500 h at 0.5 h intervals, with optical power, current, voltage, wavelength, and bandwidth. Low-output spectral fluctuations follow the patterns in the original instrument records.",
       "sampleCount": 20,
       "sampleLabel": "trajectories",
       "tags": [
@@ -384,9 +384,12 @@
         }
       ],
       "citation": {
-        "text": "[1] C. C. Zhang, X. Feng, and J. Jiang, “Nonhomogeneous hidden semi-Markov modeling for censored accelerated degradation tests of blue laser diodes,” manuscript submitted for publication, 2026."
+        "text": "[1] C. C. Zhang, X. Feng, and J. Jiang, “Segmental Viterbi estimation using transition constraints for covariate-dependent hidden semi-Markov degradation models with right censoring,” Reliab. Eng. Syst. Saf., vol. 278, Art. no. 113615, Feb. 2027, doi: 10.1016/j.ress.2026.113615.",
+        "journal": "Reliab. Eng. Syst. Saf.",
+        "doi": "10.1016/j.ress.2026.113615"
       },
-      "updated": "2026-11-02"
+      "updated": "2026-11-02",
+      "article": "https://doi.org/10.1016/j.ress.2026.113615"
     }
   ]
 }
