@@ -157,10 +157,10 @@
   "datasets": [
     {
       "id": "vcsel-795",
-      "title": "795 nm VCSEL lifetime dataset",
+      "title": "795 nm VCSEL pseudo dataset",
       "category": "VCSEL",
       "format": "CSV",
-      "description": "This dataset is constructed from experimentally observed VCSEL degradation trends provided by the Changchun Institute of Optics, Fine Mechanics and Physics, Chinese Academy of Sciences, and Changchun ACE Photonics Co., Ltd. It contains 62 full-lifetime synthetic degradation trajectories at 795 nm under different aging temperatures and drive currents, for reliability modeling, lifetime prediction, and algorithm benchmarking under simulated conditions.",
+      "description": "This pseudo dataset contains 62 generated full-lifetime VCSEL degradation trajectories at 795 nm under different aging temperatures and drive currents. It supports simulated reliability-method research, lifetime prediction, and algorithm comparison.",
       "sampleCount": 62,
       "sampleLabel": "trajectories",
       "tags": [
@@ -217,14 +217,31 @@
         "doi": "10.1016/j.ress.2026.113039"
       },
       "article": "https://doi.org/10.1016/j.ress.2026.113039",
-      "updated": "2026-11-02"
+      "updated": "2026-11-02",
+      "dataType": "Pseudo dataset",
+      "provenance": "Based on original measurements.",
+      "usage": "For testing and benchmarking under simulated conditions only.",
+      "attribution": [
+        {
+          "name": "Chizhi Chris Zhang",
+          "url": "https://chizhizhang.github.io/"
+        },
+        {
+          "name": "Changchun Institute of Optics, Fine Mechanics and Physics, Chinese Academy of Sciences",
+          "url": "https://ciomp.cas.cn/"
+        },
+        {
+          "name": "Changchun ACE Photonics Co., Ltd.",
+          "url": "https://acephotonics.com/"
+        }
+      ]
     },
     {
       "id": "vcsel-894",
-      "title": "894 nm VCSEL lifetime dataset",
+      "title": "894 nm VCSEL pseudo dataset",
       "category": "VCSEL",
       "format": "CSV",
-      "description": "This dataset is constructed from experimentally observed VCSEL degradation trends provided by the Changchun Institute of Optics, Fine Mechanics and Physics, Chinese Academy of Sciences, and Changchun ACE Photonics Co., Ltd. It contains 45 full-lifetime synthetic degradation trajectories at 894 nm under different aging temperatures and drive currents, for reliability modeling, lifetime prediction, and algorithm benchmarking under simulated conditions.",
+      "description": "This pseudo dataset contains 45 generated full-lifetime VCSEL degradation trajectories at 894 nm under different aging temperatures and drive currents. It supports simulated reliability-method research, lifetime prediction, and algorithm comparison.",
       "sampleCount": 45,
       "sampleLabel": "trajectories",
       "tags": [
@@ -281,6 +298,94 @@
         "doi": "10.1016/j.ress.2026.113039"
       },
       "article": "https://doi.org/10.1016/j.ress.2026.113039",
+      "updated": "2026-11-02",
+      "dataType": "Pseudo dataset",
+      "provenance": "Based on original measurements.",
+      "usage": "For testing and benchmarking under simulated conditions only.",
+      "attribution": [
+        {
+          "name": "Chizhi Chris Zhang",
+          "url": "https://chizhizhang.github.io/"
+        },
+        {
+          "name": "Changchun Institute of Optics, Fine Mechanics and Physics, Chinese Academy of Sciences",
+          "url": "https://ciomp.cas.cn/"
+        },
+        {
+          "name": "Changchun ACE Photonics Co., Ltd.",
+          "url": "https://acephotonics.com/"
+        }
+      ]
+    },
+    {
+      "id": "bld-455",
+      "title": "455 nm blue laser pseudo dataset",
+      "category": "Blue laser",
+      "format": "CSV",
+      "dataType": "Pseudo dataset",
+      "provenance": "Based on original measurements.",
+      "usage": "For testing and benchmarking under simulated conditions only.",
+      "attribution": [
+        {
+          "name": "Chizhi Chris Zhang",
+          "url": "https://chizhizhang.github.io/"
+        },
+        {
+          "name": "Changchun Institute of Optics, Fine Mechanics and Physics, Chinese Academy of Sciences",
+          "url": "https://ciomp.cas.cn/"
+        },
+        {
+          "name": "China Electronic Product Reliability and Environmental Testing Research Institute (CEPREI; the Fifth Electronics Research Institute of MIIT), Guangzhou",
+          "url": "https://www.ceprei.com/"
+        }
+      ],
+      "description": "This pseudo dataset contains 20 generated blue-laser degradation trajectories based on 19 original life-test records at 3.0, 3.5, 4.0, and 4.5 A. The source tests used a 25 °C water-cooling setpoint. Each trajectory covers 0–500 h at 0.5 h intervals, with optical power, current, voltage, wavelength, and bandwidth. Low-output spectral fluctuations follow the patterns in the original instrument records.",
+      "sampleCount": 20,
+      "sampleLabel": "trajectories",
+      "tags": [
+        "455 nm",
+        "3.0–4.5 A",
+        "25 °C cooling setpoint",
+        "0–500 h",
+        "Every 0.5 h"
+      ],
+      "file": "BLD_455_Dataset.zip",
+      "bytes": 106735,
+      "sha256": "005cc3feaeaeec625e0119503909fda0723abd3a3f83c8f38645c65b84ff8c4f",
+      "coverage": "One CSV per pseudo device. Trajectories cover 0–500 h; records that do not reach the chosen failure threshold by 500 h are right censored. Use the 20 h optical-power value as the reference for normalized-power analyses. Large wavelength and bandwidth fluctuations at very low optical output represent instrument-like tail readings.",
+      "structure": [
+        "BLD_455_Dataset/",
+        "BLD_455_001.csv … BLD_455_020.csv"
+      ],
+      "fields": [
+        {
+          "name": "time_h",
+          "description": "Elapsed test time (h)"
+        },
+        {
+          "name": "current_A",
+          "description": "Drive current (A)"
+        },
+        {
+          "name": "voltage_V",
+          "description": "Device voltage (V)"
+        },
+        {
+          "name": "power_W",
+          "description": "Optical power (W)"
+        },
+        {
+          "name": "wavelength_nm",
+          "description": "Generated wavelength reading (nm); low-output readings may be unstable"
+        },
+        {
+          "name": "bandwidth_nm",
+          "description": "Generated spectral bandwidth reading (nm); low-output readings may be unstable"
+        }
+      ],
+      "citation": {
+        "text": "[1] C. C. Zhang, X. Feng, and J. Jiang, “Nonhomogeneous hidden semi-Markov modeling for censored accelerated degradation tests of blue laser diodes,” manuscript submitted for publication, 2026."
+      },
       "updated": "2026-11-02"
     }
   ]

@@ -16,7 +16,8 @@ datasets appear in batches of six and code packages in batches of ten.
 Dataset records use: id, title, category, format, description, sampleCount,
 sampleLabel, tags (array), file, bytes, sha256, coverage, structure (array),
 fields (array of name/description pairs), citation (text/journal/doi), article,
-and updated. Reuse either existing dataset record as the template.
+dataType, provenance, usage, attribution (name/url pairs), and updated.
+Reuse an existing dataset record as the template.
 
 Code records use the existing projects schema. Duplicate a code record and
 replace its publication, archive, contents and run instructions.
@@ -30,9 +31,15 @@ the responsive two-section layout.
 
 VCSEL_795_Dataset.zip contains 62 final CSV trajectories.
 VCSEL_894_Dataset.zip contains 45 final CSV trajectories.
+BLD_455_Dataset.zip contains 20 final CSV trajectories, sampled every 0.5 h
+from 0 to 500 h. The optical-power unit is W, drive current is A, and
+wavelength/bandwidth units are nm. Non-crossing lifetimes are right censored.
 Each archive contains only final CSVs in its own English-named dataset folder.
 The dataset cards provide the English descriptions, variable definitions,
-and the associated article's IEEE citation.
+and the associated article's IEEE citation. All three are explicitly labeled
+pseudo data based on original measurements, for testing and benchmarking
+under simulated conditions only. Source attribution is visible on each card.
+The 455 nm citation identifies a submitted manuscript without inventing a DOI.
 
 The five existing research-code archives retain their URLs and byte contents.
 Verify archive contents, counts, checksums, citations, downloads and mobile

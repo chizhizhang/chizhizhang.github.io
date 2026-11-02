@@ -9,3 +9,6 @@
 @media(max-width:550px){.dataset-card-main{padding:24px 21px}.dataset-card h3{font-size:27px}.dataset-card .dataset-description{font-size:16px}.dataset-card-actions{padding:0 21px 22px}.dataset-card .dataset-body{padding:0 21px}.dataset-card .dataset-detail-grid{grid-template-columns:1fr}.dataset-card .file-tree{font-size:10px}.dataset-list{gap:20px}.dataset-stats{margin-top:14px}.dataset-stats strong{font-size:33px}}
 .dataset-list{align-items:start}
 .article-reference{color:#344b60;font-size:15px;line-height:1.65;margin-top:12px;overflow-wrap:anywhere}.code-main h3{overflow-wrap:anywhere}.dataset-card .citation-box{padding-top:20px}.dataset-card .dataset-details{border-top:1px solid var(--line);margin-top:8px}.dataset-card .citation{font-size:14px;line-height:1.7}.dataset-card .copy-status{min-height:16px}.dataset-card .citation-heading{align-items:center}
+
+
+.dataset-use{margin-top:17px;font-size:14px;line-height:1.65}.dataset-use strong,.dataset-use span{display:block}.dataset-use strong{color:var(--blue);font-weight:600}.dataset-use span{color:var(--ink);margin-top:3px}.dataset-attribution{font-size:14px;line-height:1.65;color:var(--muted);margin-top:15px;overflow-wrap:anywhere}.dataset-attribution strong{font-weight:600;color:var(--ink)}.dataset-attribution a{text-decoration:none}.dataset-attribution a:hover{text-decoration:underline}
