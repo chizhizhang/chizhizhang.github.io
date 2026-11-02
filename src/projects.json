@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-11-02",
   "projects": [
     {
       "id": "early-stage-lifetime",
@@ -152,6 +152,136 @@
       "venue": "Reliability Engineering & System Safety",
       "referenceDetails": "vol. 278, Art. no. 113615, 2027",
       "article": "https://doi.org/10.1016/j.ress.2026.113615"
+    }
+  ],
+  "datasets": [
+    {
+      "id": "vcsel-795",
+      "title": "795 nm VCSEL lifetime dataset",
+      "category": "VCSEL",
+      "format": "CSV",
+      "description": "This dataset is constructed from experimentally observed VCSEL degradation trends provided by the Changchun Institute of Optics, Fine Mechanics and Physics, Chinese Academy of Sciences, and Changchun ACE Photonics Co., Ltd. It contains 62 full-lifetime synthetic degradation trajectories at 795 nm under different aging temperatures and drive currents, for reliability modeling, lifetime prediction, and algorithm benchmarking under simulated conditions.",
+      "sampleCount": 62,
+      "sampleLabel": "trajectories",
+      "tags": [
+        "795 nm",
+        "50–120 °C",
+        "2.0–4.0 mA",
+        "Hourly"
+      ],
+      "file": "VCSEL_795_Dataset.zip",
+      "bytes": 26121120,
+      "sha256": "57732839df55c670548c4dcc620402768688325f680465c50381eda832b993e0",
+      "coverage": "One CSV per device. Each trajectory starts at 0 h and ends when optical power first reaches zero.",
+      "structure": [
+        "VCSEL_795_Dataset/",
+        "VCSEL_795_001.csv … VCSEL_795_062.csv"
+      ],
+      "fields": [
+        {
+          "name": "time_h",
+          "description": "Elapsed time (h)"
+        },
+        {
+          "name": "power_mW",
+          "description": "Optical power (mW)"
+        },
+        {
+          "name": "current_mA",
+          "description": "Drive current (mA)"
+        },
+        {
+          "name": "aging_temp_C",
+          "description": "Aging temperature (°C)"
+        },
+        {
+          "name": "wavelength_nm",
+          "description": "Nominal wavelength (nm)"
+        },
+        {
+          "name": "power0_mW",
+          "description": "Initial optical power (mW)"
+        },
+        {
+          "name": "relative_power",
+          "description": "Power / initial power"
+        },
+        {
+          "name": "voltage_V",
+          "description": "Initial device voltage (V)"
+        }
+      ],
+      "citation": {
+        "text": "[1] C. C. Zhang, X. Feng, and H. Zhang, “Variable-length multiobjective optimization of inspection schedules for condition-based maintenance of vertical-cavity surface-emitting lasers under imperfect detection,” Reliab. Eng. Syst. Saf., vol. 277, Art. no. 113039, Jan. 2027, doi: 10.1016/j.ress.2026.113039.",
+        "journal": "Reliab. Eng. Syst. Saf.",
+        "doi": "10.1016/j.ress.2026.113039"
+      },
+      "article": "https://doi.org/10.1016/j.ress.2026.113039",
+      "updated": "2026-11-02"
+    },
+    {
+      "id": "vcsel-894",
+      "title": "894 nm VCSEL lifetime dataset",
+      "category": "VCSEL",
+      "format": "CSV",
+      "description": "This dataset is constructed from experimentally observed VCSEL degradation trends provided by the Changchun Institute of Optics, Fine Mechanics and Physics, Chinese Academy of Sciences, and Changchun ACE Photonics Co., Ltd. It contains 45 full-lifetime synthetic degradation trajectories at 894 nm under different aging temperatures and drive currents, for reliability modeling, lifetime prediction, and algorithm benchmarking under simulated conditions.",
+      "sampleCount": 45,
+      "sampleLabel": "trajectories",
+      "tags": [
+        "894 nm",
+        "100–120 °C",
+        "1.5–2.0 mA",
+        "Hourly"
+      ],
+      "file": "VCSEL_894_Dataset.zip",
+      "bytes": 4395113,
+      "sha256": "db1a1b7c628c1062d16e6a327f5bc64f84903eaf99c05302dcafd37e486634be",
+      "coverage": "One CSV per device. Each trajectory starts at 0 h and ends when optical power first reaches zero.",
+      "structure": [
+        "VCSEL_894_Dataset/",
+        "VCSEL_894_001.csv … VCSEL_894_045.csv"
+      ],
+      "fields": [
+        {
+          "name": "time_h",
+          "description": "Elapsed time (h)"
+        },
+        {
+          "name": "power_mW",
+          "description": "Optical power (mW)"
+        },
+        {
+          "name": "current_mA",
+          "description": "Drive current (mA)"
+        },
+        {
+          "name": "aging_temp_C",
+          "description": "Aging temperature (°C)"
+        },
+        {
+          "name": "wavelength_nm",
+          "description": "Nominal wavelength (nm)"
+        },
+        {
+          "name": "power0_mW",
+          "description": "Initial optical power (mW)"
+        },
+        {
+          "name": "relative_power",
+          "description": "Power / initial power"
+        },
+        {
+          "name": "voltage_V",
+          "description": "Initial device voltage (V)"
+        }
+      ],
+      "citation": {
+        "text": "[1] C. C. Zhang, X. Feng, and H. Zhang, “Variable-length multiobjective optimization of inspection schedules for condition-based maintenance of vertical-cavity surface-emitting lasers under imperfect detection,” Reliab. Eng. Syst. Saf., vol. 277, Art. no. 113039, Jan. 2027, doi: 10.1016/j.ress.2026.113039.",
+        "journal": "Reliab. Eng. Syst. Saf.",
+        "doi": "10.1016/j.ress.2026.113039"
+      },
+      "article": "https://doi.org/10.1016/j.ress.2026.113039",
+      "updated": "2026-11-02"
     }
   ]
 }

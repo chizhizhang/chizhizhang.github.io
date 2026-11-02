@@ -1,21 +1,40 @@
-# Research code library
+# Datasets and research code
 
-The public page is https://chizhizhang.github.io/src/.
-Project records are maintained in projects.json. Add a new download archive to
-this directory and add its project record to that file. The page loads the
-registry automatically; no HTML changes are needed for another project.
+Public page: https://chizhizhang.github.io/src/
 
-Required record fields: id (public topic slug), referenceNumber, authors, venue,
-referenceDetails, title, short, journal, status, area, file,
-description, includes (array), data, commands (array), language, bytes,
-sha256 and updated. article is optional.
+## Adding future entries
 
-Retain published archive URLs when updating the library. Use new versioned
-filenames when the content changes. Verify the ZIP opens, the README matches
-its contents and the download works before adding an entry. Do not include
-manuscripts, peer-review correspondence, credentials or restricted source
-measurements in a code release. The project-specific data statements describe
-what is included and what is required for complete reproduction.
+The live catalog is generated from projects.json. The datasets and projects
+arrays are independent. Upload a new archive to src/ and add its record to the
+appropriate array. No HTML, CSS or JavaScript changes are needed for a new entry.
+Update the top-level updated date and the entry's ISO updated date.
 
-GitHub Pages downloads do not replace DOI-issuing archival deposits. An archive
-DOI can be added to an entry as the optional doi field when verified.
+Counts, newest-first ordering, categories, search and Show more controls update
+automatically. Dataset search and code search are independent. Additional
+datasets appear in batches of six and code packages in batches of ten.
+
+Dataset records use: id, title, category, format, description, sampleCount,
+sampleLabel, tags (array), file, bytes, sha256, coverage, structure (array),
+fields (array of name/description pairs), citation (text/journal/doi), article,
+and updated. Reuse either existing dataset record as the template.
+
+Code records use the existing projects schema. Duplicate a code record and
+replace its publication, archive, contents and run instructions.
+
+index.html contains a static fallback of the current catalog. code-library.js
+loads the registry and renders current and future entries using shared templates.
+The page remains readable if JavaScript is unavailable. code-library.css handles
+the responsive two-section layout.
+
+## Current datasets
+
+VCSEL_795_Dataset.zip contains 62 final CSV trajectories.
+VCSEL_894_Dataset.zip contains 45 final CSV trajectories.
+Each archive contains only final CSVs in its own English-named dataset folder.
+The dataset cards provide the English descriptions, variable definitions,
+and the associated article's IEEE citation.
+
+The five existing research-code archives retain their URLs and byte contents.
+Verify archive contents, counts, checksums, citations, downloads and mobile
+layout when publishing. Do not include source measurements, manuscripts,
+correspondence or credentials in a release.
