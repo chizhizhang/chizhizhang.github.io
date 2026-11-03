@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "projects": [
     {
       "id": "early-stage-lifetime",
@@ -390,6 +390,80 @@
       },
       "updated": "2026-11-02",
       "article": "https://doi.org/10.1016/j.ress.2026.113615"
+    },
+    {
+      "id": "bld-450",
+      "title": "450 nm blue laser pseudo dataset",
+      "category": "Blue laser",
+      "format": "CSV",
+      "dataType": "Pseudo dataset",
+      "provenance": "Based on original measurements.",
+      "usage": "For testing and benchmarking under simulated conditions only.",
+      "attribution": [
+        {
+          "name": "Chizhi Chris Zhang",
+          "url": "https://chizhizhang.github.io/"
+        },
+        {
+          "name": "Changchun Institute of Optics, Fine Mechanics and Physics, Chinese Academy of Sciences",
+          "url": "https://ciomp.cas.cn/"
+        },
+        {
+          "name": "China Electronic Product Reliability and Environmental Testing Research Institute (CEPREI; the Fifth Electronics Research Institute of MIIT), Guangzhou",
+          "url": "https://www.ceprei.com/"
+        }
+      ],
+      "description": "This pseudo dataset contains 18 generated degradation trajectories for 450 nm blue laser diodes, sampled every 0.5 h. Power and voltage trends are constrained by original measurements. Device-specific aging-current changes after 1500 h are retained, with smooth changes in degradation rate while the recorded aging temperature stays constant.",
+      "sampleCount": 18,
+      "sampleLabel": "trajectories",
+      "tags": [
+        "450 nm",
+        "35–70 °C",
+        "50–350 mA aging",
+        "600 mA characterization",
+        "Every 0.5 h"
+      ],
+      "file": "BLD_450_Dataset.zip",
+      "bytes": 1316110,
+      "sha256": "184889883e735b5b2ef41bbde172b5ded74d1195f10934030162e4a443c8b500",
+      "coverage": "One CSV per device, with cumulative aging time. Each trajectory ends at the device’s last original measurement time (700–2700 h). Apply a chosen failure threshold and treat non-crossing records as right-censored.",
+      "structure": [
+        "BLD_450_Dataset/",
+        "PBLD_450_Dxx.csv (18 device files)"
+      ],
+      "fields": [
+        {
+          "name": "time_h",
+          "description": "Cumulative aging time (h)"
+        },
+        {
+          "name": "current_mA",
+          "description": "Characterization current (mA), fixed at 600 mA"
+        },
+        {
+          "name": "voltage_V",
+          "description": "Simulated device voltage at the characterization current (V)"
+        },
+        {
+          "name": "power_mW",
+          "description": "Simulated optical power at the characterization current (mW)"
+        },
+        {
+          "name": "aging_current_mA",
+          "description": "Aging current (mA), including recorded changes after 1500 h where applicable"
+        },
+        {
+          "name": "aging_temperature_C",
+          "description": "Recorded aging temperature (°C), constant within each device"
+        }
+      ],
+      "citation": {
+        "text": "[1] C. C. Zhang, X. Feng, and J. Jiang, “Segmental Viterbi estimation using transition constraints for covariate-dependent hidden semi-Markov degradation models with right censoring,” Reliab. Eng. Syst. Saf., vol. 278, Art. no. 113615, Feb. 2027, doi: 10.1016/j.ress.2026.113615.",
+        "journal": "Reliab. Eng. Syst. Saf.",
+        "doi": "10.1016/j.ress.2026.113615"
+      },
+      "article": "https://doi.org/10.1016/j.ress.2026.113615",
+      "updated": "2026-11-03"
     }
   ]
 }

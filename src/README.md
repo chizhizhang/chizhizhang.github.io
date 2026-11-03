@@ -31,15 +31,19 @@ the responsive two-section layout.
 
 VCSEL_795_Dataset.zip contains 62 final CSV trajectories.
 VCSEL_894_Dataset.zip contains 45 final CSV trajectories.
+BLD_450_Dataset.zip contains 18 final CSV trajectories, sampled every 0.5 h.
+Each ends at its device’s last measurement time (700–2700 h). The power unit
+is mW. Characterization current is fixed at 600 mA; aging current and aging
+temperature are separate fields, with recorded current changes after 1500 h.
 BLD_455_Dataset.zip contains 20 final CSV trajectories, sampled every 0.5 h
 from 0 to 500 h. The optical-power unit is W, drive current is A, and
 wavelength/bandwidth units are nm. Non-crossing lifetimes are right censored.
 Each archive contains only final CSVs in its own English-named dataset folder.
 The dataset cards provide the English descriptions, variable definitions,
-and the associated article's IEEE citation. All three are explicitly labeled
+and the associated article's IEEE citation. All four are explicitly labeled
 pseudo data based on original measurements, for testing and benchmarking
 under simulated conditions only. Source attribution is visible on each card.
-The 455 nm dataset cites the published RESS article on Segmental Viterbi estimation
+The 450 nm and 455 nm datasets cite the published RESS article on Segmental Viterbi estimation
 (doi: 10.1016/j.ress.2026.113615).
 
 The five existing research-code archives retain their URLs and byte contents.
