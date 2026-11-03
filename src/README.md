@@ -9,8 +9,9 @@ arrays are independent. Upload a new archive to src/ and add its record to the
 appropriate array. No HTML, CSS or JavaScript changes are needed for a new entry.
 Update the top-level updated date and the entry's ISO updated date.
 
-Counts, newest-first ordering, categories, search and Show more controls update
-automatically. Dataset search and code search are independent. Additional
+Counts, wavelength ordering for datasets, newest-first ordering for research
+code, categories, search and Show more controls update automatically.
+Dataset search and code search are independent. Additional
 datasets appear in batches of six and code packages in batches of ten.
 
 Dataset records use: id, title, category, format, description, sampleCount,

@@ -6,6 +6,10 @@
   const size = bytes => bytes < 1e6 ? `${(bytes/1024).toFixed(0)} KB` : `${(bytes/1048576).toFixed(1)} MB`;
   const icon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg>';
   const plural = (n,word) => `${n} ${word}${n === 1 ? '' : 's'}`;
+  function compareDatasets(a,b) {
+    const wavelength=d=>Number((String(d.title || '').match(/(\d+(?:\.\d+)?)\s*nm\b/i) || [,'Infinity'])[1]);
+    return wavelength(a)-wavelength(b) || (b.updated || '').localeCompare(a.updated || '') || String(a.title || '').localeCompare(String(b.title || ''));
+  }
   function datasetCard(d) {
     const citation=d.citation || {};let text=esc(citation.text || '');
     if(citation.journal)text=text.replace(esc(citation.journal),`<em>${esc(citation.journal)}</em>`);
@@ -20,7 +24,7 @@
     const citation=`${esc((p.authors || '').replace(/\*/g,''))}. <em>${esc(p.venue)}</em>, ${esc(p.referenceDetails)}.`;
     return `<article class="code-card" id="${esc(p.id)}"><span class="code-number" aria-hidden="true">${String(index+1).padStart(2,'0')}</span><div class="code-main"><div class="code-meta"><span class="area">${esc(p.area)}</span><span class="meta-divider" aria-hidden="true">/</span><span>${esc(p.journal)}</span><span class="meta-divider" aria-hidden="true">/</span><span>${esc(p.status)}</span></div><h3>${title}</h3><p class="article-reference">${citation}</p><p class="code-description">${esc(p.description)}</p></div><div class="code-download"><a class="button button-outline" href="${esc(safeFile(p.file))}" download aria-label="Download ${esc(p.short || p.title)} ZIP">Download ZIP ${icon}</a><span class="code-size">${esc(p.language)} · ${size(p.bytes)}</span></div><details class="code-details"><summary>Package details</summary><div class="code-detail-body"><div class="code-detail-grid"><div><h4>In the package</h4><ul>${(p.includes || []).map(t=>`<li>${esc(t)}</li>`).join('')}</ul><p class="code-data-note">${esc(p.data)}</p></div><div><h4>Run from the extracted project root</h4><pre class="commands">${(p.commands || []).map(esc).join('\n')}</pre></div></div><p class="archive-checksum">SHA-256 ${esc(p.sha256)}</p></div></details></article>`;
   }
-  if(typeof module!=='undefined'&&module.exports){module.exports={datasetCard,codeCard};return;}
+  if(typeof module!=='undefined'&&module.exports){module.exports={datasetCard,codeCard,compareDatasets};return;}
   const catalogs={
     datasets:{items:[],filter:'All',query:'',limit:6,step:6,key:'category',list:'dataset-list',search:'dataset-search',filters:'dataset-filters',count:'dataset-result-count',empty:'dataset-empty',more:'dataset-more',noun:'dataset'},
     projects:{items:[],filter:'All',query:'',limit:10,step:10,key:'area',list:'code-projects',search:'code-search',filters:'code-filters',count:'result-count',empty:'empty-state',more:'code-more',noun:'code package'}
@@ -49,7 +53,7 @@
     catch{const range=document.createRange();range.selectNodeContents(text);const s=window.getSelection();s.removeAllRanges();s.addRange(range);status.textContent='Citation selected. Copy it using your browser.';}
   });
   fetch('projects.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error('Catalog unavailable');return r.json();}).then(data=>{
-    Object.keys(catalogs).forEach(name=>{catalogs[name].items=(data[name] || []).slice().sort((a,b)=>(b.updated || '').localeCompare(a.updated || ''));filters(name);render(name);});
+    Object.keys(catalogs).forEach(name=>{const order=name==='datasets'?compareDatasets:(a,b)=>(b.updated || '').localeCompare(a.updated || '');catalogs[name].items=(data[name] || []).slice().sort(order);filters(name);render(name);});
     byId('dataset-count').textContent=String(catalogs.datasets.items.length).padStart(2,'0');byId('code-count').textContent=String(catalogs.projects.items.length).padStart(2,'0');byId('dataset-count-label').textContent=catalogs.datasets.items.length===1?'Dataset':'Datasets';
     if(data.updated){byId('updated').dateTime=data.updated;byId('updated').textContent=new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(data.updated+'T00:00:00Z'));}
     if(location.hash){const id=decodeURIComponent(location.hash.slice(1));Object.entries(catalogs).forEach(([name,c])=>{const i=c.items.findIndex(p=>p.id===id);if(i>=c.limit){c.limit=i+1;render(name);}});requestAnimationFrame(()=>byId(id)?.scrollIntoView());}
