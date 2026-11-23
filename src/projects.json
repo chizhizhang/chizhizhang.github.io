@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-23",
   "projects": [
     {
       "id": "early-stage-lifetime",
@@ -152,6 +152,33 @@
       "venue": "Reliability Engineering & System Safety",
       "referenceDetails": "vol. 278, Art. no. 113615, 2027",
       "article": "https://doi.org/10.1016/j.ress.2026.113615"
+    },
+    {
+      "id": "vcsel-endpoint-construction",
+      "title": "Source-traceable reliability endpoint construction with paired sensitivity and source attribution in degradation archives",
+      "short": "VCSEL reliability endpoint construction",
+      "journal": "RESS",
+      "status": "In revision",
+      "area": "Reliability",
+      "file": "vcsel-endpoint-code-data-v1.zip",
+      "description": "Paired comparisons of threshold crossing definitions for degradation archives, with source evidence for changes in registered endpoints.",
+      "includes": [
+        "Numerical analysis code and rule definitions",
+        "Synthetic observations and endpoint traces",
+        "Aggregate results and an Excel workbook"
+      ],
+      "data": "The historical VCSEL workbooks are held by the data provider. The archive includes a synthetic example and links to the public data sources.",
+      "commands": [
+        "python -m pip install -r scripts/requirements.txt",
+        "python -B scripts/ress_revision_checks.py --example-only --output replay"
+      ],
+      "language": "Python",
+      "bytes": 137057,
+      "sha256": "88f000df5fdf25c1609f3ec60a10ad0b05164c5688650a99b648bdf65c494a31",
+      "updated": "2026-11-23",
+      "authors": "C. C. Zhang, X. Feng, and J. Jiang",
+      "venue": "Reliability Engineering & System Safety",
+      "referenceDetails": "manuscript in revision"
     }
   ],
   "datasets": [

@@ -31,9 +31,19 @@
   };
   const byId=id=>document.getElementById(id);
   const searchable=p=>[p.id,p.title,p.short,p.authors,p.venue,p.journal,p.category,p.area,p.description,p.provenance,p.usage,...(p.attribution || []).map(a=>a.name),p.language,p.status,...(p.tags || []),...(p.includes || [])].join(' ').toLowerCase();
+  function codeGroups(projects){
+    const groups = [
+      ['published', 'Published', projects.filter(p => p.status === 'Published')],
+      ['in-revision', 'Unpublished · In revision or under review', projects.filter(p => p.status !== 'Published')],
+    ];
+    return groups.filter(([, , items]) => items.length).map(([id, title, items]) =>
+      `<section class="code-group" id="${id}" aria-labelledby="${id}-title"><h3 class="code-group-title" id="${id}-title">${title}</h3>${items.map(codeCard).join('')}</section>`
+    ).join('');
+  }
   function render(name){
     const c=catalogs[name],matches=c.items.filter(p=>(c.filter==='All'||(p[c.key] || 'Other')===c.filter)&&searchable(p).includes(c.query));
-    byId(c.list).innerHTML=matches.slice(0,c.limit).map((p,i)=>name==='datasets'?datasetCard(p):codeCard(p,i)).join('');
+    const visible=matches.slice(0,c.limit);
+    byId(c.list).innerHTML=name==='datasets'?visible.map(datasetCard).join(''):codeGroups(visible);
     byId(c.count).textContent=matches.length===c.items.length?plural(matches.length,c.noun):`${matches.length} of ${plural(c.items.length,c.noun)}`;
     byId(c.empty).hidden=matches.length!==0;byId(c.more).hidden=matches.length<=c.limit;
     byId(c.more).textContent=`Show ${Math.min(c.step,Math.max(0,matches.length-c.limit))} more`;
