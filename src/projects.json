@@ -155,7 +155,7 @@
     },
     {
       "id": "vcsel-endpoint-construction",
-      "title": "Source-traceable reliability endpoint construction with paired sensitivity and source attribution in degradation archives",
+      "title": "Paired endpoint sensitivity and source attribution for reliability assessment from degradation archives",
       "short": "VCSEL reliability endpoint construction",
       "journal": "RESS",
       "status": "In revision",
